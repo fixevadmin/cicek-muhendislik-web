@@ -1,0 +1,85 @@
+:root {
+  /* ---- Color: Navy (primary) ---- */
+  --navy-900: #0a1f44;
+  --navy-800: #102a57;
+  --navy-700: #16356e;
+  --navy-600: #1c4185;
+  --navy-500: #23539c;
+  --navy-400: #4a78bd;
+  --navy-300: #7da0d6;
+  --navy-200: #b8d0ed;
+  --navy-100: #e1ebf7;
+
+  /* ---- Color: White & light gray (neutral) ---- */
+  --white: #ffffff;
+  --gray-50: #f7f8fa;
+  --gray-100: #eef1f5;
+  --gray-200: #e0e5ec;
+  --gray-300: #cdd5e0;
+  --gray-400: #aab6c6;
+  --gray-500: #8392a6;
+  --gray-600: #5f6c80;
+  --gray-700: #45505f;
+  --gray-800: #2d3640;
+  --gray-900: #1a2028;
+
+  /* ---- Accent (subtle steel blue) ---- */
+  --accent-600: #1b6a8f;
+  --accent-500: #2a87b3;
+  --accent-400: #45a4cf;
+  --accent-300: #7cc4e2;
+
+  /* ---- Status ---- */
+  --success-600: #1f7a4d;
+  --success-500: #2a9a60;
+  --success-100: #e0f3ea;
+  --warning-600: #b57300;
+  --warning-500: #d99100;
+  --warning-100: #fbf0d9;
+  --error-600: #b3261e;
+  --error-500: #d63b32;
+  --error-100: #f8e0de;
+
+  /* ---- Typography ---- */
+  --font-sans: "Inter", "Segoe UI", system-ui, -apple-system, "Helvetica Neue", Arial, sans-serif;
+  --font-mono: "SF Mono", "Fira Code", "Cascadia Code", Consolas, monospace;
+
+  /* ---- Spacing (8px system) ---- */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --space-10: 2.5rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+  --space-20: 5rem;
+  --space-24: 6rem;
+
+  /* ---- Radius ---- */
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+  --radius-full: 9999px;
+
+  /* ---- Shadow ---- */
+  --shadow-xs: 0 1px 2px rgba(10, 31, 68, 0.06);
+  --shadow-sm: 0 1px 3px rgba(10, 31, 68, 0.08), 0 1px 2px rgba(10, 31, 68, 0.04);
+  --shadow-md: 0 4px 12px rgba(10, 31, 68, 0.1), 0 2px 4px rgba(10, 31, 68, 0.06);
+  --shadow-lg: 0 12px 28px rgba(10, 31, 68, 0.14), 0 4px 10px rgba(10, 31, 68, 0.08);
+  --shadow-xl: 0 24px 56px rgba(10, 31, 68, 0.2), 0 8px 20px rgba(10, 31, 68, 0.1);
+
+  /* ---- Layout ---- */
+  --container-max: 1200px;
+  --container-wide: 1320px;
+  --header-height: 76px;
+
+  /* ---- Motion ---- */
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --dur-fast: 160ms;
+  --dur-base: 260ms;
+  --dur-slow: 420ms;
+}

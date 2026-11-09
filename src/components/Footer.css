@@ -1,0 +1,140 @@
+.footer {
+  background: var(--navy-900);
+  color: var(--navy-200);
+  padding-top: clamp(var(--space-12), 5vw, var(--space-20));
+}
+
+.footer__inner {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-10);
+  padding-bottom: var(--space-12);
+}
+
+.footer__brand {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  margin-bottom: var(--space-5);
+}
+
+.footer__logo {
+  color: var(--white);
+}
+
+.footer__brand-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.15;
+}
+
+.footer__brand-name {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--white);
+}
+
+.footer__brand-sub {
+  font-size: 0.72rem;
+  color: var(--navy-300);
+}
+
+.footer__tagline {
+  font-size: 0.9rem;
+  color: var(--navy-300);
+  line-height: 1.7;
+  margin-bottom: var(--space-6);
+  max-width: 320px;
+}
+
+.footer__github {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-2) var(--space-4);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: var(--radius-md);
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--navy-100);
+  transition: all var(--dur-fast) var(--ease-out);
+}
+
+.footer__github:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.3);
+  color: var(--white);
+}
+
+.footer__col-title {
+  color: var(--white);
+  font-size: 0.95rem;
+  font-weight: 700;
+  margin-bottom: var(--space-5);
+  letter-spacing: 0.01em;
+}
+
+.footer__links {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.footer__link {
+  font-size: 0.88rem;
+  color: var(--navy-300);
+  transition: color var(--dur-fast) var(--ease-out);
+}
+
+.footer__link:hover {
+  color: var(--white);
+}
+
+.footer__contact {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-2);
+  font-size: 0.88rem;
+  color: var(--navy-300);
+}
+
+.footer__contact svg {
+  color: var(--navy-400);
+  margin-top: 3px;
+  flex-shrink: 0;
+}
+
+.footer__contact a {
+  color: var(--navy-300);
+}
+
+.footer__contact a:hover {
+  color: var(--white);
+}
+
+.footer__bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-block: var(--space-6);
+}
+
+.footer__bottom-inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+  font-size: 0.82rem;
+  color: var(--navy-400);
+}
+
+@media (min-width: 560px) {
+  .footer__inner {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 900px) {
+  .footer__inner {
+    grid-template-columns: 1.6fr 1fr 1fr 1.2fr;
+  }
+}
