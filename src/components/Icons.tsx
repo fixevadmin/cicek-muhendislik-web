@@ -22,14 +22,22 @@ export function LogoMark({ size = 36, className }: IconProps) {
   return (
     <svg width={size} height={size} viewBox="0 0 64 64" fill="none" className={className}>
       <rect width="64" height="64" rx="14" fill="currentColor" />
+      {/* Hexagon frame */}
       <path
-        d="M32 14a10 10 0 0 0-10 10c0 6 10 18 10 18s10-12 10-18a10 10 0 0 0-10-10Z"
+        d="M32 12 50 22.5v21L32 54 14 43.5v-21Z"
         stroke="#ffffff"
-        strokeWidth="3"
+        strokeWidth="2.4"
         strokeLinejoin="round"
       />
-      <circle cx="32" cy="24" r="3.5" fill="#ffffff" />
-      <path d="M18 48h28" stroke="#c9d6e8" strokeWidth="3" strokeLinecap="round" />
+      {/* Geometric flower — six radial petals */}
+      <g stroke="#ffffff" strokeWidth="2" strokeLinecap="round">
+        <path d="M32 26v12" />
+        <path d="M32 26 22.4 32.5v5" />
+        <path d="M32 26 41.6 32.5v5" />
+      </g>
+      <circle cx="32" cy="26" r="3" fill="#ffffff" />
+      {/* Base line */}
+      <path d="M20 46h24" stroke="#c9d6e8" strokeWidth="2.4" strokeLinecap="round" />
     </svg>
   );
 }

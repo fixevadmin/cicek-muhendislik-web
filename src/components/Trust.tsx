@@ -14,17 +14,16 @@ export default function Trust() {
     <section id="about" className="section trust">
       <div className="container trust__inner">
         <div className="trust__intro">
-          <span className="eyebrow">Kurumsal Yaklaşımımız</span>
-          <h2>Bilgi ve uygulama bir arada</h2>
+          <span className="eyebrow">Neden Çiçek Mühendislik?</span>
+          <h2>Mühendislik altyapısı ve saha tecrübesi</h2>
           <p className="trust__lead">
             {COMPANY.fullName} olarak iş sağlığı ve güvenliği alanında bilgi paylaşımı, teknik
-            doküman sunumu ve profesyonel danışmanlık hizmetlerini tek bir platformda
-            birleştiriyoruz.
+            doküman sunumu ve danışmanlık hizmetlerini tek bir platformda sunuyoruz.
           </p>
           <p className="trust__text">
-            Amacımız İSG profesyonelleri ve işletmeler için mevzuata uygun, pratik ve uygulanabilir
-            çözümler üretmek. Mühendislik altyapımız ve saha tecrübemizle, teorik bilgiyi sahada
-            çalışan metodolojilere dönüştürüyoruz.
+            İSG profesyonelleri ve işletmeler için mevzuata uygun, pratik ve uygulanabilir çözümler
+            üretiyoruz. Mühendislik altyapımız ve saha tecrübemizle teorik bilgiyi sahada çalışan
+            metodolojilere dönüştürüyoruz.
           </p>
 
           <ul className="trust__principles">

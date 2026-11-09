@@ -1,0 +1,189 @@
+.consultation {
+  background: var(--gray-50);
+}
+
+.consultation__panel {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-12);
+  padding: clamp(var(--space-10), 5vw, var(--space-16));
+  background: linear-gradient(135deg, var(--navy-900) 0%, var(--navy-700) 100%);
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  color: var(--white);
+}
+
+.consultation__bg {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 85% 15%, rgba(74, 120, 189, 0.3) 0%, transparent 50%),
+    radial-gradient(circle at 15% 85%, rgba(35, 83, 156, 0.25) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.consultation__bg::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  background-size: 40px 40px;
+  mask-image: radial-gradient(circle at 70% 30%, black, transparent 75%);
+  -webkit-mask-image: radial-gradient(circle at 70% 30%, black, transparent 75%);
+}
+
+.consultation__content {
+  position: relative;
+  max-width: 520px;
+}
+
+.consultation__eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-2) var(--space-4);
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: var(--radius-full);
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: var(--navy-200);
+  margin-bottom: var(--space-6);
+}
+
+.consultation__title {
+  color: var(--white);
+  font-size: clamp(1.6rem, 3.5vw, 2.25rem);
+  line-height: 1.2;
+  margin-bottom: var(--space-5);
+}
+
+.consultation__desc {
+  color: var(--navy-200);
+  font-size: 1.02rem;
+  line-height: 1.7;
+  margin-bottom: var(--space-8);
+}
+
+.consultation__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-4);
+  margin-bottom: var(--space-8);
+}
+
+.consultation__btn {
+  background: var(--white);
+  color: var(--navy-900);
+}
+.consultation__btn:hover {
+  background: var(--gray-100);
+  color: var(--navy-900);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.consultation__btn-alt {
+  background: transparent;
+  color: var(--white);
+  border: 1.5px solid rgba(255, 255, 255, 0.3);
+}
+.consultation__btn-alt:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.5);
+  color: var(--white);
+  transform: translateY(-2px);
+}
+
+.consultation__checklist {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3) var(--space-6);
+}
+
+.consultation__check {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--navy-100);
+}
+
+.consultation__check svg {
+  color: var(--accent-300);
+  flex-shrink: 0;
+}
+
+/* ---- Steps ---- */
+.consultation__steps {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+}
+
+.consultation__step {
+  padding: var(--space-6);
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius-lg);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  transition: all var(--dur-base) var(--ease-out);
+  opacity: 0;
+  animation: stepIn var(--dur-slow) var(--ease-out) forwards;
+}
+
+.consultation__step:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.2);
+  transform: translateX(4px);
+}
+
+.consultation__step-num {
+  display: inline-block;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  color: var(--accent-300);
+  margin-bottom: var(--space-2);
+}
+
+.consultation__step-title {
+  color: var(--white);
+  font-size: 1.1rem;
+  margin-bottom: var(--space-2);
+}
+
+.consultation__step-desc {
+  font-size: 0.88rem;
+  color: var(--navy-200);
+  line-height: 1.6;
+}
+
+@keyframes stepIn {
+  from {
+    opacity: 0;
+    transform: translateX(-12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@media (min-width: 960px) {
+  .consultation__panel {
+    grid-template-columns: 1.1fr 1fr;
+    gap: var(--space-16);
+    align-items: center;
+  }
+  .consultation__steps {
+    flex-direction: column;
+  }
+}

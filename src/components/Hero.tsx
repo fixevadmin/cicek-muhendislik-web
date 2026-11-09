@@ -1,4 +1,3 @@
-import { COMPANY } from "../data/site";
 import { ArrowRight, Check } from "./Icons";
 import "./Hero.css";
 
@@ -23,7 +22,7 @@ export default function Hero() {
           </h1>
           <p className="hero__desc">
             İSG profesyonelleri ve işletmeler için teknik dokümanlar, uygulamalı rehberler ve
-            profesyonel danışmanlık. {COMPANY.fullName} güvencesiyle.
+            mühendislik danışmanlığı bir arada. Bilgiyi sahada uygulanabilir çözümlere dönüştürün.
           </p>
 
           <ul className="hero__highlights">
