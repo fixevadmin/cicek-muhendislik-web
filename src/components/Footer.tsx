@@ -1,4 +1,4 @@
-import { COMPANY, NAV_ITEMS, SERVICES } from "../data/site";
+import { COMPANY, NAV_ITEMS, SECTORS, SERVICES } from "../data/site";
 import { GitHub, LogoMark, Mail, MapPin, Phone } from "./Icons";
 import "./Footer.css";
 
@@ -16,8 +16,8 @@ export default function Footer() {
             </span>
           </a>
           <p className="footer__tagline">
-            İş sağlığı ve güvenliği alanında bilgi paylaşımı, dijital doküman satışı, mühendislik,
-            eğitim ve danışmanlık hizmetleri.
+            Türkiye'de bütün sektörlere yönelik iş sağlığı ve güvenliği danışmanlığı, eğitim,
+            tatbikat, denetim ve işyeri sağlık hizmetleri.
           </p>
           <a
             href={COMPANY.githubUrl}
@@ -51,6 +51,19 @@ export default function Footer() {
               <li key={s.id}>
                 <a href="#services" className="footer__link">
                   {s.title}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </nav>
+
+        <nav className="footer__col" aria-label="Sektörler">
+          <h4 className="footer__col-title">Sektörler</h4>
+          <ul className="footer__links">
+            {SECTORS.slice(0, 5).map((s) => (
+              <li key={s.id}>
+                <a href="#sectors" className="footer__link">
+                  {s.name}
                 </a>
               </li>
             ))}

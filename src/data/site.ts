@@ -1,9 +1,9 @@
-import type { Article, Document, NavItem, Service, TrustPillar } from "../types";
+import type { Article, Document, NavItem, Sector, Service, TrustPillar } from "../types";
 
 export const COMPANY = {
   name: "Çiçek Mühendislik",
   fullName: "Çiçek Mühendislik Eğitim ve Danışmanlık",
-  tagline: "İş güvenliğinde bilgi, uygulama ve çözüm.",
+  tagline: "İş sağlığı ve güvenliğinde kapsamlı çözümler, güvenli çalışma kültürü.",
   email: "info@cicekmuhendislik.com",
   phone: "+90 (000) 000 00 00",
   address: "Örnek Mah. Örnek Cad. No: 0, İstanbul",
@@ -13,54 +13,137 @@ export const COMPANY = {
 export const NAV_ITEMS: NavItem[] = [
   { id: "home", label: "Ana Sayfa", href: "#home" },
   { id: "services", label: "Hizmetler", href: "#services" },
+  { id: "sectors", label: "Sektörler", href: "#sectors" },
+  { id: "training", label: "Eğitim ve Tatbikat", href: "#training" },
   { id: "store", label: "Doküman Mağazası", href: "#store" },
-  { id: "knowledge", label: "Bilgi Merkezi", href: "#knowledge" },
   { id: "about", label: "Hakkımızda", href: "#about" },
   { id: "contact", label: "İletişim", href: "#contact" },
 ];
 
 export const SERVICES: Service[] = [
   {
-    id: "risk-analysis",
-    title: "Risk Analizleri",
+    id: "isg-consulting",
+    title: "İSG Danışmanlığı",
     description:
-      "İşletmenize özel risk değerlendirmesi ve tehlike analizi çalışmaları ile güvenli çalışma ortamının temellerini atın.",
-    features: ["Tehlike tespiti", "Risk değerlendirme matrisi", "Kontrol önlemleri planı"],
-    iconName: "risk-analysis",
+      "Risk değerlendirmesinden mevzuat uyumuna, İSG kurul süreçlerinden iş kazası incelemesine kadar kapsamlı danışmanlık desteği.",
+    features: [
+      "Risk değerlendirmesi",
+      "Saha denetimleri",
+      "Mevzuat uyum çalışmaları",
+      "İSG kurul süreçleri",
+      "İş kazası inceleme ve raporlama",
+      "Acil durum planlaması",
+    ],
+    iconName: "consulting",
   },
   {
-    id: "documents",
-    title: "İSG Dokümanları",
+    id: "workplace-health",
+    title: "İşyeri Sağlık Hizmetleri",
     description:
-      "Mevzuata uygun, uygulanabilir dijital İSG dokümanları ve prosedürlerle sistematinizi hızla kurun.",
-    features: ["Dijital teslim", "Düzenlenebilir format", "Mevzuat uyumlu"],
-    iconName: "documents",
+      "Mevzuatın gerektirdiği yetkili sağlık kuruluşları ve yetkin sağlık profesyonelleri ile koordine edilen işyeri sağlık hizmetleri.",
+    features: [
+      "İşyeri hekimliği hizmetleri",
+      "İşe giriş ve periyodik muayeneler",
+      "Çalışan sağlık gözetimi",
+      "Sağlık eğitimleri",
+      "Tetkik ve süreç koordinasyonu",
+    ],
+    iconName: "health",
   },
   {
     id: "training",
-    title: "Eğitim Materyalleri",
+    title: "Eğitim ve Tatbikatlar",
     description:
-      "İSG eğitimleri için hazır sunumlar, uygulamalı rehberler ve test materyalleri ile eğitim süreçlerinizi güçlendirin.",
-    features: ["Hazır sunumlar", "Uygulamalı rehberler", "Değerlendirme formları"],
+      "Çalışan İSG eğitimlerinden yangın ve tahliye tatbikatlarına kadar uygulamalı eğitim ve tatbikat hizmetleri.",
+    features: [
+      "Çalışan İSG eğitimleri",
+      "İşe özel ve sektörel eğitimler",
+      "Acil durum eğitimleri",
+      "Yangın söndürme ve tahliye tatbikatları",
+      "İlk yardım eğitimi koordinasyonu",
+    ],
     iconName: "training",
   },
   {
     id: "inspection",
-    title: "Saha Denetimi",
+    title: "Teknik Denetim ve Saha Hizmetleri",
     description:
-      "İşletmenizin sahada mevcut durumunun belirlenmesi, uygunsuzluk tespiti ve düzeltici faaliyet önerileri.",
-    features: ["Saha tespiti", "Uygunsuzluk raporu", "Düzeltici faaliyet önerisi"],
+      "İş ekipmanları ve çalışma alanları için teknik kontroller, uygunsuzluk tespiti ve düzeltici faaliyet takibi.",
+    features: [
+      "İş ekipmanı kontrolleri",
+      "Çalışma alanı denetimleri",
+      "Uygunsuzluk tespitleri",
+      "Teknik raporlama",
+      "Düzeltici ve önleyici faaliyet takibi",
+    ],
     iconName: "inspection",
   },
   {
-    id: "consulting",
-    title: "Teknik Danışmanlık",
+    id: "documentation",
+    title: "İSG Dokümantasyonu",
     description:
-      "İSG yönetim sistemi kurulumu, mevzuat uyumu ve süreç iyileştirme konularında uzman danışmanlık desteği.",
-    features: ["Sistem kurulumu", "Mevzuat uyumu", "Süreç iyileştirme"],
-    iconName: "consulting",
+      "Risk analizleri, acil durum planları, çalışma talimatları ve prosedürler için mevzuata uygun doküman hazırlama.",
+    features: [
+      "Risk analizleri",
+      "Acil durum planları",
+      "Çalışma talimatları",
+      "Kontrol formları",
+      "Eğitim dokümanları ve prosedürler",
+    ],
+    iconName: "documents",
+  },
+  {
+    id: "sectoral",
+    title: "Sektörel İSG Çözümleri",
+    description:
+      "İnşaattan madenciliğe, lojistikten hizmet sektörüne kadar her iş kolunun risk yapısına özel İSG çözümleri.",
+    features: [
+      "Sektöre özel risk haritası",
+      "Uygulamalı denetim metodolojisi",
+      "Sektörel mevzuat uyumu",
+      "İş kollarına özel eğitimler",
+    ],
+    iconName: "sector",
   },
 ];
+
+export const SECTORS: Sector[] = [
+  { id: "inşaat", name: "İnşaat", iconName: "construction" },
+  { id: "beton", name: "Hazır Beton ve Yapı Malzemeleri", iconName: "concrete" },
+  { id: "sanayi", name: "Sanayi ve Üretim", iconName: "industry" },
+  { id: "lojistik", name: "Lojistik ve Depolama", iconName: "logistics" },
+  { id: "maden", name: "Maden ve Doğal Kaynaklar", iconName: "mining" },
+  { id: "hizmet", name: "Hizmet Sektörü", iconName: "service" },
+  { id: "diger", name: "Diğer İş Kolları", iconName: "other" },
+];
+
+export const TRAINING_ITEMS = [
+  {
+    id: "isg-egitim",
+    title: "Çalışan İSG Eğitimleri",
+    desc: "Tüm çalışanlar için temel iş sağlığı ve güvenliği eğitimleri.",
+  },
+  {
+    id: "sektorel-egitim",
+    title: "İşe Özel ve Sektörel Eğitimler",
+    desc: "İşin ve sektörün risk yapısına göre tasarlanmış özel eğitimler.",
+  },
+  {
+    id: "acil-durum",
+    title: "Acil Durum Eğitimleri",
+    desc: "Acil durum senaryolarına hazırlık ve müdahale eğitimleri.",
+  },
+  {
+    id: "yangin-tahliye",
+    title: "Yangın Söndürme ve Tahliye Tatbikatları",
+    desc: "Uygulamalı yangın söndürme ve tahliye tatbikat planlaması ve yürütülmesi.",
+  },
+  {
+    id: "ilk-yardim",
+    title: "İlk Yardım Eğitimi Koordinasyonu",
+    desc: "Yetkili kuruluşlarla koordineli ilk yardım eğitimi düzenlenmesi.",
+  },
+] as const;
 
 export const FEATURED_DOCUMENTS: Document[] = [
   {
@@ -165,7 +248,7 @@ export const TRUST_PILLARS: TrustPillar[] = [
     id: "support",
     title: "Sürekli Destek",
     description:
-      "Doküman satışından danışmanlık sonrasına kadar tüm süreçlerde teknik destek sağlıyoruz.",
+      "Hizmet kapsamına göre danışmanlık sonrası süreçlerde de teknik destek sağlıyoruz.",
     iconName: "support",
   },
 ];

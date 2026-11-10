@@ -2,9 +2,10 @@ import { ArrowRight, Check } from "./Icons";
 import "./Hero.css";
 
 const HIGHLIGHTS = [
-  "Mevzuata uygun dokümanlar",
-  "Uygulamalı rehberler",
-  "Profesyonel danışmanlık",
+  "İSG danışmanlığı",
+  "İşyeri sağlık hizmetleri",
+  "Eğitim ve tatbikatlar",
+  "Teknik denetim",
 ];
 
 export default function Hero() {
@@ -18,11 +19,13 @@ export default function Hero() {
             İş Sağlığı ve Güvenliği
           </span>
           <h1 className="hero__title">
-            İş güvenliğinde <span className="hero__title-accent">bilgi, uygulama ve çözüm.</span>
+            İş sağlığı ve güvenliğinde{" "}
+            <span className="hero__title-accent">kapsamlı çözümler, güvenli çalışma kültürü.</span>
           </h1>
           <p className="hero__desc">
-            İSG profesyonelleri ve işletmeler için teknik dokümanlar, uygulamalı rehberler ve
-            mühendislik danışmanlığı bir arada. Bilgiyi sahada uygulanabilir çözümlere dönüştürün.
+            İşletmenizin ihtiyaçlarına uygun İSG danışmanlığı, işyeri sağlık hizmetleri, eğitimler,
+            tatbikatlar, denetimler ve teknik çözümler. Türkiye'de bütün sektörlere yönelik
+            profesyonel mühendislik ve danışmanlık hizmetleri.
           </p>
 
           <ul className="hero__highlights">
@@ -37,12 +40,12 @@ export default function Hero() {
           </ul>
 
           <div className="hero__actions">
-            <a href="#store" className="btn btn--primary btn--lg">
-              Dokümanları Keşfet
+            <a href="#services" className="btn btn--primary btn--lg">
+              Hizmetlerimizi Keşfedin
               <ArrowRight size={18} />
             </a>
-            <a href="#services" className="btn btn--secondary btn--lg">
-              Danışmanlık Hizmetleri
+            <a href="#contact" className="btn btn--secondary btn--lg">
+              Danışmanlık Talebi Oluştur
             </a>
           </div>
         </div>
@@ -50,13 +53,17 @@ export default function Hero() {
         <div className="hero__visual" aria-hidden>
           <div className="hero__card hero__card--main">
             <div className="hero__card-head">
-              <span className="hero__card-label">İSG Dokümanı</span>
-              <span className="hero__card-pages">48 sayfa</span>
+              <span className="hero__card-label">İSG Hizmeti</span>
+              <span className="hero__card-pages">Kapsamlı</span>
             </div>
-            <div className="hero__card-title">Genel Risk Değerlendirme Rehberi</div>
+            <div className="hero__card-title">İSG Danışmanlığı</div>
+            <p className="hero__card-text">
+              Risk değerlendirmesi, mevzuat uyumu, denetim ve eğitim süreçleri tek elden yönetilir.
+            </p>
             <div className="hero__card-meta">
-              <span className="hero__card-tag">Risk Analizleri</span>
-              <span className="hero__card-format">PDF + Düzenlenebilir</span>
+              <span className="hero__card-tag">Danışmanlık</span>
+              <span className="hero__card-tag">Denetim</span>
+              <span className="hero__card-tag">Eğitim</span>
             </div>
             <div className="hero__card-bars">
               <div className="hero__card-bar" style={{ width: "82%" }} />
@@ -66,7 +73,7 @@ export default function Hero() {
           </div>
 
           <div className="hero__card hero__card--float">
-            <div className="hero__card-stat">5</div>
+            <div className="hero__card-stat">6</div>
             <div className="hero__card-stat-label">Hizmet Alanı</div>
           </div>
 

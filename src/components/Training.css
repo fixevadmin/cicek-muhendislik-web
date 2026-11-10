@@ -1,0 +1,116 @@
+.training {
+  background: var(--gray-50);
+}
+
+.training__inner {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-12);
+  align-items: start;
+}
+
+.training__lead {
+  color: var(--gray-600);
+  margin-top: var(--space-4);
+  margin-bottom: var(--space-8);
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+.training__feature {
+  display: flex;
+  gap: var(--space-4);
+  padding: var(--space-6);
+  background: var(--white);
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius-lg);
+  margin-bottom: var(--space-8);
+  transition: all var(--dur-base) var(--ease-out);
+}
+
+.training__feature:hover {
+  border-color: var(--navy-200);
+  box-shadow: var(--shadow-md);
+}
+
+.training__feature-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 52px;
+  border-radius: var(--radius-md);
+  background: linear-gradient(135deg, var(--navy-800), var(--navy-600));
+  color: var(--white);
+  flex-shrink: 0;
+}
+
+.training__feature-title {
+  font-size: 1.1rem;
+  margin-bottom: var(--space-2);
+}
+
+.training__feature-desc {
+  font-size: 0.9rem;
+  color: var(--gray-600);
+  line-height: 1.6;
+}
+
+.training__cta {
+  margin-top: var(--space-2);
+}
+
+.training__list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.training__item {
+  display: flex;
+  gap: var(--space-4);
+  padding: var(--space-6);
+  background: var(--white);
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius-lg);
+  transition: all var(--dur-base) var(--ease-out);
+  opacity: 0;
+  animation: cardIn var(--dur-slow) var(--ease-out) forwards;
+}
+
+.training__item:hover {
+  border-color: var(--navy-200);
+  transform: translateX(4px);
+  box-shadow: var(--shadow-sm);
+}
+
+.training__item-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: var(--success-100);
+  color: var(--success-600);
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.training__item-title {
+  font-size: 1.02rem;
+  margin-bottom: var(--space-2);
+}
+
+.training__item-desc {
+  font-size: 0.88rem;
+  color: var(--gray-600);
+  line-height: 1.6;
+}
+
+@media (min-width: 960px) {
+  .training__inner {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-16);
+  }
+}

@@ -13,11 +13,12 @@ export type Service = {
 };
 
 export type ServiceIconName =
-  | "risk-analysis"
-  | "documents"
+  | "consulting"
+  | "health"
   | "training"
   | "inspection"
-  | "consulting";
+  | "documents"
+  | "sector";
 
 export type Document = {
   id: string;
@@ -54,3 +55,18 @@ export type TrustPillar = {
 };
 
 export type TrustIconName = "compliance" | "expertise" | "confidentiality" | "support";
+
+export type Sector = {
+  id: string;
+  name: string;
+  iconName: SectorIconName;
+};
+
+export type SectorIconName =
+  | "construction"
+  | "concrete"
+  | "industry"
+  | "logistics"
+  | "mining"
+  | "service"
+  | "other";

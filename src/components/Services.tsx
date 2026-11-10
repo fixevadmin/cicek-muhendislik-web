@@ -8,10 +8,10 @@ export default function Services() {
       <div className="container">
         <div className="section-head">
           <span className="eyebrow">Hizmetlerimiz</span>
-          <h2>Uçtan uca iş güvenliği çözümleri</h2>
+          <h2>Kapsamlı İSG hizmet kategorileri</h2>
           <p>
-            Risk analizinden saha denetimine, dijital dokümanlardan teknik danışmanlığa kadar İSG
-            ihtiyaçlarınızı tek platformdan karşılayın.
+            Danışmanlıktan işyeri sağlık hizmetlerine, eğitimlerden teknik denetime kadar
+            işletmenizin İSG ihtiyaçlarını tek kaynaktan karşılayın.
           </p>
         </div>
 
