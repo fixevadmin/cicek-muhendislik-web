@@ -187,3 +187,16 @@
     flex-direction: column;
   }
 }
+
+@media (max-width: 480px) {
+  .consultation__actions {
+    flex-direction: column;
+  }
+  .consultation__btn,
+  .consultation__btn-alt {
+    width: 100%;
+  }
+  .consultation__step {
+    padding: var(--space-4);
+  }
+}

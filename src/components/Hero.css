@@ -60,10 +60,10 @@
 
 .hero__title {
   color: var(--white);
-  font-size: clamp(2.25rem, 5.5vw, 3.75rem);
+  font-size: clamp(1.85rem, 4vw, 3rem);
   font-weight: 800;
-  line-height: 1.08;
-  letter-spacing: -0.03em;
+  line-height: 1.12;
+  letter-spacing: -0.02em;
   margin-bottom: var(--space-6);
 }
 
@@ -75,9 +75,9 @@
 }
 
 .hero__desc {
-  font-size: clamp(1.05rem, 2vw, 1.2rem);
+  font-size: clamp(0.98rem, 1.6vw, 1.12rem);
   color: var(--navy-200);
-  max-width: 560px;
+  max-width: 540px;
   line-height: 1.7;
   margin-bottom: var(--space-8);
 }
@@ -154,7 +154,7 @@
 .hero__card--main {
   top: 0;
   right: 0;
-  width: 320px;
+  width: min(320px, 100%);
   color: var(--navy-900);
 }
 
@@ -251,7 +251,7 @@
 
 .hero__card--float-2 {
   bottom: 60px;
-  right: 220px;
+  left: 0;
   display: flex;
   align-items: center;
   gap: var(--space-3);
@@ -291,10 +291,49 @@
 
 @media (min-width: 960px) {
   .hero__inner {
-    grid-template-columns: 1.15fr 1fr;
-    gap: var(--space-16);
+    grid-template-columns: 1.1fr 1fr;
+    gap: var(--space-12);
   }
   .hero__visual {
     display: block;
+    min-height: 340px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .hero__inner {
+    gap: var(--space-16);
+  }
+  .hero__visual {
+    min-height: 360px;
+  }
+}
+
+@media (max-width: 959px) {
+  .hero__card--float {
+    display: none;
+  }
+  .hero__card--float-2 {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero__highlights {
+    gap: var(--space-2) var(--space-4);
+    margin-bottom: var(--space-8);
+  }
+  .hero__highlight {
+    font-size: 0.85rem;
+  }
+  .hero__actions {
+    flex-direction: column;
+    gap: var(--space-3);
+  }
+  .hero__actions .btn {
+    width: 100%;
+  }
+  .hero__card--main {
+    padding: var(--space-4);
   }
 }

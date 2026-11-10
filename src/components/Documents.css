@@ -134,7 +134,6 @@
   font-size: 0.9rem;
   font-weight: 600;
   color: var(--navy-600);
-  white-space: nowrap;
   transition: gap var(--dur-fast) var(--ease-out);
 }
 
