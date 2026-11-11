@@ -316,31 +316,31 @@ export const ARTICLES: Article[] = [
 
 export const TRUST_PILLARS: TrustPillar[] = [
   {
-    id: "compliance",
-    title: "Mevzuat Uyumu",
+    id: "comprehensive",
+    title: "Kapsamlı Hizmet",
     description:
-      "Tüm doküman ve hizmetlerimiz güncel iş sağlığı ve güvenliği mevzuatı göz önünde bulundurularak hazırlanır.",
+      "Danışmanlık, işyeri sağlık hizmetleri, eğitim, tatbikat ve dokümantasyonu tek kaynaktan yönetiyoruz.",
     iconName: "compliance",
   },
   {
-    id: "expertise",
-    title: "Teknik Uzmanlık",
+    id: "sectoral",
+    title: "Sektörel Yaklaşım",
     description:
-      "Mühendislik altyapısı ve saha tecrübesi ile pratik, uygulanabilir çözümler sunuyoruz.",
+      "İnşaat, hazır beton, maden, sanayi, lojistik ve hizmet sektörlerinin risk yapısına göre çözüm tasarlıyoruz.",
     iconName: "expertise",
   },
   {
-    id: "confidentiality",
-    title: "Gizlilik",
+    id: "technical",
+    title: "Teknik Değerlendirme",
     description:
-      "İşletmenize ait tüm bilgiler ve danışmanlık süreçleri tam gizlilik ilkesiyle yürütülür.",
-    iconName: "confidentiality",
+      "Saha denetimleri ve mühendislik incelemeleriyle riskleri ölçülebilir ve uygulanabilir bulgulara dönüştürüyoruz.",
+    iconName: "support",
   },
   {
-    id: "support",
-    title: "Sürekli Destek",
+    id: "culture",
+    title: "Sürdürülebilir İSG Kültürü",
     description:
-      "Hizmet kapsamına göre danışmanlık sonrası süreçlerde de teknik destek sağlıyoruz.",
-    iconName: "support",
+      "Kalıcı güvenli çalışma kültürü için eğitim, takip ve düzeltici faaliyetleri birlikte yürütüyoruz.",
+    iconName: "confidentiality",
   },
 ];

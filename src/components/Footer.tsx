@@ -1,6 +1,14 @@
-import { COMPANY, NAV_ITEMS, SECTORS, SERVICES } from "../data/site";
+import { COMPANY, SECTORS, SERVICES } from "../data/site";
 import { GitHub, LogoMark, Mail, MapPin, Phone } from "./Icons";
 import "./Footer.css";
+
+const CORPORATE_LINKS = [
+  { label: "Hakkımızda", href: "#about" },
+  { label: "Danışmanlık Talebi", href: "#consultation" },
+  { label: "Doküman Mağazası", href: "#store" },
+  { label: "Eğitim ve Tatbikat", href: "#training" },
+  { label: "İletişim", href: "#contact" },
+];
 
 export default function Footer() {
   const year = new Date().getFullYear();
@@ -31,11 +39,11 @@ export default function Footer() {
           </a>
         </div>
 
-        <nav className="footer__col" aria-label="Menü">
-          <h4 className="footer__col-title">Menü</h4>
+        <nav className="footer__col" aria-label="Kurumsal">
+          <h4 className="footer__col-title">Kurumsal</h4>
           <ul className="footer__links">
-            {NAV_ITEMS.map((item) => (
-              <li key={item.id}>
+            {CORPORATE_LINKS.map((item) => (
+              <li key={item.href}>
                 <a href={item.href} className="footer__link">
                   {item.label}
                 </a>
@@ -50,7 +58,7 @@ export default function Footer() {
             {SERVICES.map((s) => (
               <li key={s.id}>
                 <a href="#services" className="footer__link">
-                  {s.title}
+                  {s.shortTitle}
                 </a>
               </li>
             ))}
@@ -60,7 +68,7 @@ export default function Footer() {
         <nav className="footer__col" aria-label="Sektörler">
           <h4 className="footer__col-title">Sektörler</h4>
           <ul className="footer__links">
-            {SECTORS.slice(0, 5).map((s) => (
+            {SECTORS.map((s) => (
               <li key={s.id}>
                 <a href="#sectors" className="footer__link">
                   {s.name}

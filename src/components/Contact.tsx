@@ -1,23 +1,25 @@
 import { useState } from "react";
-import { COMPANY } from "../data/site";
+import { COMPANY, SERVICES } from "../data/site";
 import { ArrowRight, Check, Mail, MapPin, Phone } from "./Icons";
 import "./Contact.css";
 
 type FormState = {
   name: string;
   email: string;
+  service: string;
   subject: string;
   message: string;
 };
 
-const EMPTY: FormState = { name: "", email: "", subject: "", message: "" };
+const EMPTY: FormState = { name: "", email: "", service: "", subject: "", message: "" };
 
 export default function Contact() {
   const [form, setForm] = useState<FormState>(EMPTY);
   const [submitted, setSubmitted] = useState(false);
 
   const update =
-    (key: keyof FormState) => (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) =>
+    (key: keyof FormState) =>
+    (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) =>
       setForm((f) => ({ ...f, [key]: e.target.value }));
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -116,6 +118,28 @@ export default function Contact() {
                   onChange={update("email")}
                   required
                 />
+              </div>
+              <div className="contact__field">
+                <label htmlFor="service" className="contact__label">
+                  İlgilendiğiniz hizmet
+                </label>
+                <select
+                  id="service"
+                  className="contact__input"
+                  value={form.service}
+                  onChange={update("service")}
+                  required
+                >
+                  <option value="" disabled>
+                    Bir hizmet seçin
+                  </option>
+                  {SERVICES.map((s) => (
+                    <option key={s.id} value={s.shortTitle}>
+                      {s.shortTitle}
+                    </option>
+                  ))}
+                  <option value="Diğer / Genel bilgi">Diğer / Genel bilgi</option>
+                </select>
               </div>
               <div className="contact__field">
                 <label htmlFor="subject" className="contact__label">
