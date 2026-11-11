@@ -1,5 +1,5 @@
 import { SECTORS } from "../data/site";
-import { SECTOR_ICONS } from "./Icons";
+import { ArrowRight, SECTOR_ICONS } from "./Icons";
 import "./Sectors.css";
 
 export default function Sectors() {
@@ -21,13 +21,18 @@ export default function Sectors() {
             return (
               <div
                 key={sector.id}
-                className="sector-chip"
+                className="sector-card"
                 style={{ animationDelay: `${i * 60}ms` }}
               >
-                <span className="sector-chip__icon">
+                <span className="sector-card__icon">
                   <Icon size={26} />
                 </span>
-                <span className="sector-chip__name">{sector.name}</span>
+                <h3 className="sector-card__name">{sector.name}</h3>
+                <p className="sector-card__desc">{sector.description}</p>
+                <a href="#contact" className="sector-card__link">
+                  Bilgi Al
+                  <ArrowRight size={15} />
+                </a>
               </div>
             );
           })}

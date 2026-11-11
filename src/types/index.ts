@@ -6,19 +6,24 @@ export type NavItem = {
 
 export type Service = {
   id: string;
+  slug: string;
   title: string;
+  shortTitle: string;
   description: string;
+  longDescription: string;
   features: string[];
   iconName: ServiceIconName;
+  highlights: string[];
 };
 
 export type ServiceIconName =
   | "consulting"
   | "health"
   | "training"
-  | "inspection"
-  | "documents"
-  | "sector";
+  | "emergency"
+  | "risk"
+  | "engineering"
+  | "documents";
 
 export type Document = {
   id: string;
@@ -58,7 +63,9 @@ export type TrustIconName = "compliance" | "expertise" | "confidentiality" | "su
 
 export type Sector = {
   id: string;
+  slug: string;
   name: string;
+  description: string;
   iconName: SectorIconName;
 };
 

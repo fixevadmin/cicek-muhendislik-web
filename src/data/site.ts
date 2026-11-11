@@ -23,9 +23,13 @@ export const NAV_ITEMS: NavItem[] = [
 export const SERVICES: Service[] = [
   {
     id: "isg-consulting",
-    title: "İSG Danışmanlığı",
+    slug: "isg-danismanligi",
+    title: "İş Sağlığı ve Güvenliği Danışmanlığı",
+    shortTitle: "İSG Danışmanlığı",
     description:
       "Risk değerlendirmesinden mevzuat uyumuna, İSG kurul süreçlerinden iş kazası incelemesine kadar kapsamlı danışmanlık desteği.",
+    longDescription:
+      "İşletmenizin iş sağlığı ve güvenliği yönetim süreçlerini mevzuata uygun ve sürdürülebilir şekilde yaplandırıyoruz. Risk değerlendirmesi, İSG kurulu çalışmaları, mevzuat uyumu ve iş kazası incelemesi konularında uçtan uca danışmanlık sağlıyoruz.",
     features: [
       "Risk değerlendirmesi",
       "Saha denetimleri",
@@ -35,12 +39,17 @@ export const SERVICES: Service[] = [
       "Acil durum planlaması",
     ],
     iconName: "consulting",
+    highlights: ["Mevzuat uyumu", "Sürdürülebilir sistem", "Süreç danışmanlığı"],
   },
   {
     id: "workplace-health",
+    slug: "isyeri-saglik-hizmetleri",
     title: "İşyeri Sağlık Hizmetleri",
+    shortTitle: "İşyeri Sağlık Hizmetleri",
     description:
       "Mevzuatın gerektirdiği yetkili sağlık kuruluşları ve yetkin sağlık profesyonelleri ile koordine edilen işyeri sağlık hizmetleri.",
+    longDescription:
+      "İşyeri sağlık hizmetleri, mevzuatın gerektirdiği yetkili sağlık kuruluşları ve yetkin sağlık profesyonelleri aracılığıyla sunulur. Süreç koordinasyonunu ve işletmenizin sağlık gözetimi gereksinimlerinin karşılanmasını üstleniyoruz.",
     features: [
       "İşyeri hekimliği hizmetleri",
       "İşe giriş ve periyodik muayeneler",
@@ -49,40 +58,93 @@ export const SERVICES: Service[] = [
       "Tetkik ve süreç koordinasyonu",
     ],
     iconName: "health",
+    highlights: ["Yetkili kuruluşlarla koordineli", "Sağlık gözetimi", "Periyodik takip"],
   },
   {
-    id: "training",
-    title: "Eğitim ve Tatbikatlar",
+    id: "safety-training",
+    slug: "is-guvenligi-egitimleri",
+    title: "İş Güvenliği Eğitimleri",
+    shortTitle: "İş Güvenliği Eğitimleri",
     description:
-      "Çalışan İSG eğitimlerinden yangın ve tahliye tatbikatlarına kadar uygulamalı eğitim ve tatbikat hizmetleri.",
+      "Çalışanların İSG bilincini güçlendiren, mevzuata uygun ve işe özel olarak tasarlanan eğitim programları.",
+    longDescription:
+      "Çalışanların iş sağlığı ve güvenliği bilincini güçlendiren, mevzuata uygun eğitim programları sunuyoruz. Temel İSG eğitimlerinden işe özel ve sektörel eğitimlere kadar çalışanların risk farkındalığını artırmayı hedefliyoruz.",
     features: [
       "Çalışan İSG eğitimleri",
       "İşe özel ve sektörel eğitimler",
-      "Acil durum eğitimleri",
-      "Yangın söndürme ve tahliye tatbikatları",
-      "İlk yardım eğitimi koordinasyonu",
+      "Yönetici ve yöneticilik eğitimleri",
+      "İSG profesyoneli eğitimleri",
+      "Eğitim materyali hazırlanması",
     ],
     iconName: "training",
+    highlights: ["Mevzuata uygun", "İşe özel tasarım", "Uygulamalı eğitim"],
   },
   {
-    id: "inspection",
-    title: "Teknik Denetim ve Saha Hizmetleri",
+    id: "emergency-fire",
+    slug: "acil-durum-yangin-tatbikatlari",
+    title: "Acil Durum ve Yangın Tatbikatları",
+    shortTitle: "Acil Durum ve Yangın Tatbikatları",
     description:
-      "İş ekipmanları ve çalışma alanları için teknik kontroller, uygunsuzluk tespiti ve düzeltici faaliyet takibi.",
+      "Acil durum senaryolarına hazırlık, yangın söndürme ve tahliye tatbikatlarının planlanması ve yürütülmesi.",
+    longDescription:
+      "Acil durum hazırlığı için uygulamalı yangın söndürme, tahliye ve acil durum tatbikatları planlıyor ve yürütüyoruz. Çalışanların acil durum prosedürlerini öğrenmesi ve saha koşullarında uygulaması için gerçek senaryo temelli tatbikatlar düzenliyoruz.",
     features: [
-      "İş ekipmanı kontrolleri",
-      "Çalışma alanı denetimleri",
-      "Uygunsuzluk tespitleri",
-      "Teknik raporlama",
+      "Yangın söndürme tatbikatları",
+      "Tahliye tatbikatları",
+      "Acil durum senaryo çalışmaları",
+      "Tatbikat planlaması ve raporlama",
+      "İlk yardım eğitimi koordinasyonu",
+    ],
+    iconName: "emergency",
+    highlights: ["Uygulamalı tatbikat", "Gerçek senaryo", "Raporlama"],
+  },
+  {
+    id: "risk-inspection",
+    slug: "risk-degerlendirme-saha-denetimleri",
+    title: "Risk Değerlendirmesi ve Saha Denetimleri",
+    shortTitle: "Risk Değerlendirmesi ve Denetim",
+    description:
+      "İşletmenizin risk haritasını çıkaran saha denetimleri, tehlike tespiti ve kontrol önlemi önerileri.",
+    longDescription:
+      "İşletmenizin çalışma alanlarında tehlike ve risk kaynaklarını tespit ediyor, risk değerlendirmesi sürecini yönetiyor ve saha denetimleri ile uygunsuzlukları raporluyoruz. Bulguları düzeltici ve önleyici faaliyetlere dönüştürerek güvenli çalışma ortamını sürdürülebilir kılıyoruz.",
+    features: [
+      "Risk değerlendirmesi süreç yönetimi",
+      "Saha denetimleri",
+      "Tehlike tespiti ve analizi",
+      "Uygunsuzluk raporlama",
       "Düzeltici ve önleyici faaliyet takibi",
     ],
-    iconName: "inspection",
+    iconName: "risk",
+    highlights: ["Saha tespiti", "Risk haritası", "Düzeltici takip"],
+  },
+  {
+    id: "technical-engineering",
+    slug: "teknik-muhendislik-hizmetleri",
+    title: "Teknik Mühendislik Hizmetleri",
+    shortTitle: "Teknik Mühendislik Hizmetleri",
+    description:
+      "İş ekipmanı kontrolleri, teknik raporlama ve mühendislik yaklaşımıyla İSG sorunlarına kalıcı çözümler.",
+    longDescription:
+      "Mühendislik altyapımız ve saha tecrübemizle iş ekipmanlarının teknik kontrollerini yapıyor, çalışma alanları için mühendislik çözümleri sunuyoruz. Teknik raporlama ve düzeltici faaliyet takibi ile İSG sorunlarına kalıcı çözümler üretiyoruz.",
+    features: [
+      "İş ekipmanı teknik kontrolleri",
+      "Çalışma alanı mühendislik incelemesi",
+      "Teknik raporlama",
+      "Koruyucu sistem tasarımı danışmanlığı",
+      "Düzeltici faaliyet mühendislik desteği",
+    ],
+    iconName: "engineering",
+    highlights: ["Mühendislik yaklaşımı", "Teknik raporlama", "Kalıcı çözüm"],
   },
   {
     id: "documentation",
+    slug: "isg-dokumantasyonu",
     title: "İSG Dokümantasyonu",
+    shortTitle: "İSG Dokümantasyonu",
     description:
       "Risk analizleri, acil durum planları, çalışma talimatları ve prosedürler için mevzuata uygun doküman hazırlama.",
+    longDescription:
+      "İşletmenizin İSG yönetim sistemi için gerekli tüm dokümanları mevzuata uygun olarak hazırlıyoruz. Risk analizlerinden acil durum planlarına, çalışma talimatlarından kontrol formlarına kadar eksiksiz dokümantasyon sağlıyoruz.",
     features: [
       "Risk analizleri",
       "Acil durum planları",
@@ -91,30 +153,60 @@ export const SERVICES: Service[] = [
       "Eğitim dokümanları ve prosedürler",
     ],
     iconName: "documents",
-  },
-  {
-    id: "sectoral",
-    title: "Sektörel İSG Çözümleri",
-    description:
-      "İnşaattan madenciliğe, lojistikten hizmet sektörüne kadar her iş kolunun risk yapısına özel İSG çözümleri.",
-    features: [
-      "Sektöre özel risk haritası",
-      "Uygulamalı denetim metodolojisi",
-      "Sektörel mevzuat uyumu",
-      "İş kollarına özel eğitimler",
-    ],
-    iconName: "sector",
+    highlights: ["Mevzuata uygun", "Eksiksiz dokümantasyon", "Düzenlenebilir şablonlar"],
   },
 ];
 
 export const SECTORS: Sector[] = [
-  { id: "inşaat", name: "İnşaat", iconName: "construction" },
-  { id: "beton", name: "Hazır Beton ve Yapı Malzemeleri", iconName: "concrete" },
-  { id: "sanayi", name: "Sanayi ve Üretim", iconName: "industry" },
-  { id: "lojistik", name: "Lojistik ve Depolama", iconName: "logistics" },
-  { id: "maden", name: "Maden ve Doğal Kaynaklar", iconName: "mining" },
-  { id: "hizmet", name: "Hizmet Sektörü", iconName: "service" },
-  { id: "diger", name: "Diğer İş Kolları", iconName: "other" },
+  {
+    id: "inşaat",
+    slug: "insaat",
+    name: "İnşaat",
+    description: "Yüksekten düşme, göçme ve ekipman riskleri başta olmak üzere inşaat sahasının İSG gereksinimleri.",
+    iconName: "construction",
+  },
+  {
+    id: "beton",
+    slug: "hazir-beton-ve-yapi-malzemeleri",
+    name: "Hazır Beton ve Yapı Malzemeleri",
+    description: "Üretim tesisleri, taşıma ve depolama süreçleri için İSG yönetim ve denetim desteği.",
+    iconName: "concrete",
+  },
+  {
+    id: "sanayi",
+    slug: "sanayi-ve-uretim",
+    name: "Sanayi ve Üretim",
+    description: "Makine, ekipman ve üretim hattı riskleri için teknik denetim ve eğitim çözümleri.",
+    iconName: "industry",
+  },
+  {
+    id: "lojistik",
+    slug: "lojistik-ve-depolama",
+    name: "Lojistik ve Depolama",
+    description: "Forklift, elleçleme ve depolama operasyonları için risk yönetimi ve saha denetimi.",
+    iconName: "logistics",
+  },
+  {
+    id: "maden",
+    slug: "maden-ve-dogal-kaynaklar",
+    name: "Maden ve Doğal Kaynaklar",
+    description: "Yeraltı ve yerüstü madencilik faaliyetleri için yüksek riskli çalışma ortamı İSG desteği.",
+    iconName: "mining",
+  },
+  {
+    id: "hizmet",
+    slug: "hizmet-sektoru",
+    name: "Hizmet Sektörü",
+    description: "Ofis, perakende ve hizmet işletmeleri için çalışan sağlığı ve ergonomi odaklı İSG çözümleri.",
+    iconName: "service",
+  },
+  {
+    id: "diger",
+    slug: "diger-is-kollari",
+    name: "Diğer İş Kolları",
+    description: "Farklı risk profillerine sahip diğer tüm iş kolları için uyumlu İSG danışmanlık desteği.",
+    iconName: "other",
+  },
 ];
 
 export const TRAINING_ITEMS = [

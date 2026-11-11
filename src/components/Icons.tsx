@@ -61,11 +61,22 @@ export const SERVICE_ICONS: Record<ServiceIconName, (p: IconProps) => JSX.Elemen
       <path d="M22 9v5" />
     </svg>
   ),
-  inspection: ({ size = 28, className }) => (
+  emergency: ({ size = 28, className }) => (
     <svg {...base(size, className)}>
-      <circle cx="11" cy="11" r="7" />
-      <path d="m21 21-4.3-4.3" />
-      <path d="M8 11h6M11 8v6" />
+      <path d="M12 2c1 4-2 5-2 8a4 4 0 0 0 8 0c0-2-1-3-2-4 0 2-1 3-2 3 1-3-1-6-2-7Z" />
+      <path d="M12 22s6-4 6-9c0-2-1-4-2-5" opacity="0.4" />
+    </svg>
+  ),
+  risk: ({ size = 28, className }) => (
+    <svg {...base(size, className)}>
+      <path d="M12 2 3 20h18L12 2Z" />
+      <path d="M12 9v6" />
+      <circle cx="12" cy="18" r="0.5" fill="currentColor" />
+    </svg>
+  ),
+  engineering: ({ size = 28, className }) => (
+    <svg {...base(size, className)}>
+      <path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 0 0 5.4-5.4l-2.5 2.5-2.5-2.5 2-2Z" />
     </svg>
   ),
   documents: ({ size = 28, className }) => (
@@ -73,14 +84,6 @@ export const SERVICE_ICONS: Record<ServiceIconName, (p: IconProps) => JSX.Elemen
       <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
       <path d="M14 2v6h6" />
       <path d="M8 13h8M8 17h6" />
-    </svg>
-  ),
-  sector: ({ size = 28, className }) => (
-    <svg {...base(size, className)}>
-      <rect x="3" y="3" width="7" height="7" rx="1" />
-      <rect x="14" y="3" width="7" height="7" rx="1" />
-      <rect x="3" y="14" width="7" height="7" rx="1" />
-      <rect x="14" y="14" width="7" height="7" rx="1" />
     </svg>
   ),
 };

@@ -27,8 +27,17 @@ export default function Services() {
                 <div className="service-card__icon">
                   <Icon size={30} />
                 </div>
-                <h3 className="service-card__title">{service.title}</h3>
+                <h3 className="service-card__title">{service.shortTitle}</h3>
                 <p className="service-card__desc">{service.description}</p>
+
+                <div className="service-card__highlights">
+                  {service.highlights.map((h) => (
+                    <span key={h} className="service-card__highlight-tag">
+                      {h}
+                    </span>
+                  ))}
+                </div>
+
                 <ul className="service-card__features">
                   {service.features.map((f) => (
                     <li key={f} className="service-card__feature">
