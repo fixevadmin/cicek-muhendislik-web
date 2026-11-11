@@ -1,4 +1,4 @@
-import { SERVICES } from "../data/site";
+import { SERVICES, servicePath } from "../data/site";
 import { ArrowRight, Check, SERVICE_ICONS } from "./Icons";
 import "./Services.css";
 
@@ -46,8 +46,8 @@ export default function Services() {
                     </li>
                   ))}
                 </ul>
-                <a href="#contact" className="service-card__link">
-                  Bilgi Al
+                <a href={servicePath(service.slug)} className="service-card__link">
+                  Detayları İncele
                   <ArrowRight size={16} />
                 </a>
               </article>

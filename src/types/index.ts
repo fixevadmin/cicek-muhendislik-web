@@ -14,6 +14,9 @@ export type Service = {
   features: string[];
   iconName: ServiceIconName;
   highlights: string[];
+  audience: string;
+  outputs: string[];
+  benefits: string[];
 };
 
 export type ServiceIconName =

@@ -24,7 +24,7 @@ export default function Header() {
   return (
     <header className={`site-header ${scrolled ? "is-scrolled" : ""}`}>
       <div className="container site-header__inner">
-        <a href="#home" className="site-header__brand" aria-label={`${COMPANY.fullName} ana sayfa`}>
+        <a href="/" className="site-header__brand" aria-label={`${COMPANY.fullName} ana sayfa`}>
           <LogoMark size={40} className="site-header__logo" />
           <span className="site-header__brand-text">
             <span className="site-header__brand-name">Çiçek Mühendislik</span>
@@ -41,7 +41,7 @@ export default function Header() {
         </nav>
 
         <div className="site-header__actions">
-          <a href="#store" className="btn btn--primary site-header__cta">
+          <a href="/#store" className="btn btn--primary site-header__cta">
             Dokümanları Keşfet
             <ArrowRight size={16} />
           </a>
@@ -70,7 +70,7 @@ export default function Header() {
             </a>
           ))}
           <a
-            href="#store"
+            href="/#store"
             className="btn btn--primary mobile-nav__cta"
             onClick={() => setOpen(false)}
           >

@@ -1,13 +1,13 @@
-import { COMPANY, SECTORS, SERVICES } from "../data/site";
+import { COMPANY, SECTORS, SERVICES, servicePath } from "../data/site";
 import { GitHub, LogoMark, Mail, MapPin, Phone } from "./Icons";
 import "./Footer.css";
 
 const CORPORATE_LINKS = [
-  { label: "Hakkımızda", href: "#about" },
-  { label: "Danışmanlık Talebi", href: "#consultation" },
-  { label: "Doküman Mağazası", href: "#store" },
-  { label: "Eğitim ve Tatbikat", href: "#training" },
-  { label: "İletişim", href: "#contact" },
+  { label: "Hakkımızda", href: "/#about" },
+  { label: "Danışmanlık Talebi", href: "/#consultation" },
+  { label: "Doküman Mağazası", href: "/#store" },
+  { label: "Eğitim ve Tatbikat", href: "/#training" },
+  { label: "İletişim", href: "/#contact" },
 ];
 
 export default function Footer() {
@@ -16,7 +16,7 @@ export default function Footer() {
     <footer className="footer">
       <div className="container footer__inner">
         <div className="footer__brand-col">
-          <a href="#home" className="footer__brand" aria-label={`${COMPANY.fullName} ana sayfa`}>
+          <a href="/" className="footer__brand" aria-label={`${COMPANY.fullName} ana sayfa`}>
             <LogoMark size={40} className="footer__logo" />
             <span className="footer__brand-text">
               <span className="footer__brand-name">Çiçek Mühendislik</span>
@@ -57,7 +57,7 @@ export default function Footer() {
           <ul className="footer__links">
             {SERVICES.map((s) => (
               <li key={s.id}>
-                <a href="#services" className="footer__link">
+                <a href={servicePath(s.slug)} className="footer__link">
                   {s.shortTitle}
                 </a>
               </li>
@@ -70,7 +70,7 @@ export default function Footer() {
           <ul className="footer__links">
             {SECTORS.map((s) => (
               <li key={s.id}>
-                <a href="#sectors" className="footer__link">
+                <a href="/#sectors" className="footer__link">
                   {s.name}
                 </a>
               </li>

@@ -11,14 +11,16 @@ export const COMPANY = {
 } as const;
 
 export const NAV_ITEMS: NavItem[] = [
-  { id: "home", label: "Ana Sayfa", href: "#home" },
-  { id: "services", label: "Hizmetler", href: "#services" },
-  { id: "sectors", label: "Sektörler", href: "#sectors" },
-  { id: "training", label: "Eğitim ve Tatbikat", href: "#training" },
-  { id: "store", label: "Doküman Mağazası", href: "#store" },
-  { id: "about", label: "Hakkımızda", href: "#about" },
-  { id: "contact", label: "İletişim", href: "#contact" },
+  { id: "home", label: "Ana Sayfa", href: "/" },
+  { id: "services", label: "Hizmetler", href: "/#services" },
+  { id: "sectors", label: "Sektörler", href: "/#sectors" },
+  { id: "training", label: "Eğitim ve Tatbikat", href: "/#training" },
+  { id: "store", label: "Doküman Mağazası", href: "/#store" },
+  { id: "about", label: "Hakkımızda", href: "/#about" },
+  { id: "contact", label: "İletişim", href: "/#contact" },
 ];
+
+export const servicePath = (slug: string) => `/hizmetler/${slug}`;
 
 export const SERVICES: Service[] = [
   {
@@ -40,6 +42,20 @@ export const SERVICES: Service[] = [
     ],
     iconName: "consulting",
     highlights: ["Mevzuat uyumu", "Sürdürülebilir sistem", "Süreç danışmanlığı"],
+    audience:
+      "İnşaat, hazır beton, maden, sanayi, lojistik ve hizmet sektörlerindeki işletmeler ile İSG süreçlerini güncellemek isteyen işveren ve yöneticiler için.",
+    outputs: [
+      "Risk değerlendirme süreç çıktıları",
+      "Kurul toplantı tutanağı şablonları",
+      "Uygunsuzluk ve iş kazası inceleme raporları",
+      "Acil durum planı danışmanlık çıktıları",
+    ],
+    benefits: [
+      "Mevzuat uyumunun takip edilebilir hale gelmesi",
+      "Risklerin önceden tespit edilmesi",
+      "Yönetim ve çalışanlar arasında net sorumluluk yapısı",
+      "Denetimlere hazırlıklı süreç yönetimi",
+    ],
   },
   {
     id: "workplace-health",
@@ -59,6 +75,20 @@ export const SERVICES: Service[] = [
     ],
     iconName: "health",
     highlights: ["Yetkili kuruluşlarla koordineli", "Sağlık gözetimi", "Periyodik takip"],
+    audience:
+      "Çalışanlarının sağlık gözetimi gereksinimlerini mevzuata uygun karşılamak isteyen işletmeler için. Hizmetler, mevzuatta öngörülen yetkili sağlık kuruluşları ve yeterlilik koşulları çerçevesinde sunulur; sağlık personeli ve kapsam teklif aşamasında netleştirilir.",
+    outputs: [
+      "Sağlık gözetimi takip çizelgesi",
+      "İşe giriş ve periyodik muayene koordinasyonu",
+      "Sağlık eğitimi planı",
+      "Süreç koordinasyon raporları",
+    ],
+    benefits: [
+      "Çalışan sağlığının düzenli izlenmesi",
+      "Mevzuat yükümlülüklerinin zamanında yerine getirilmesi",
+      "Mesleki hastalık ve iş kazası risklerinin azalması",
+      "Tek noktadan yönetilen sağlık süreci",
+    ],
   },
   {
     id: "safety-training",
@@ -78,6 +108,20 @@ export const SERVICES: Service[] = [
     ],
     iconName: "training",
     highlights: ["Mevzuata uygun", "İşe özel tasarım", "Uygulamalı eğitim"],
+    audience:
+      "Çalışanlarına mevzuata uygun İSG eğitimi vermesi gereken işletmeler, yöneticiler ve iş kolunun risklerine özel eğitim isteyen ekipler için. Eğitimler, mevzuatta öngörülen eğitim koşullarına uygun olarak planlanır.",
+    outputs: [
+      "Eğitim planı ve yıllık eğitim takvimi",
+      "Katılım belgesi ve tutanak şablonları",
+      "Eğitim sunum materyalleri",
+      "Eğitim sonrası değerlendirme formları",
+    ],
+    benefits: [
+      "Çalışanların risk farkındalığının artması",
+      "Eğitim yükümlülüklerinin kayıt altına alınması",
+      "İş kazası ve ramak kala olaylarının azalması",
+      "İşe özel içeriklerle daha kalıcı öğrenme",
+    ],
   },
   {
     id: "emergency-fire",
@@ -97,10 +141,24 @@ export const SERVICES: Service[] = [
     ],
     iconName: "emergency",
     highlights: ["Uygulamalı tatbikat", "Gerçek senaryo", "Raporlama"],
+    audience:
+      "Yüksek risk taşıyan çalışma alanları, depolama ve üretim tesisleri, kalabalık çalışan barındıran işletmeler ve acil durum planını test etmek isteyen kurumlar için.",
+    outputs: [
+      "Tatbikat senaryosu ve planı",
+      "Tatbikat gözlem ve değerlendirme raporu",
+      "Tahliye krokisi ve toplanma alanı önerileri",
+      "İyileştirme eylem listesi",
+    ],
+    benefits: [
+      "Acil durumda çalışanların doğru davranması",
+      "Tahliye süresinin ölçülüp iyileştirilmesi",
+      "Acil durum ekiplerinin rol bilgisinin güçlenmesi",
+      "Mevzuata uygun tatbikat kaydı",
+    ],
   },
   {
     id: "risk-inspection",
-    slug: "risk-degerlendirme-saha-denetimleri",
+    slug: "risk-degerlendirmesi-saha-denetimleri",
     title: "Risk Değerlendirmesi ve Saha Denetimleri",
     shortTitle: "Risk Değerlendirmesi ve Denetim",
     description:
@@ -116,10 +174,24 @@ export const SERVICES: Service[] = [
     ],
     iconName: "risk",
     highlights: ["Saha tespiti", "Risk haritası", "Düzeltici takip"],
+    audience:
+      "Üretim, inşaat, lojistik ve hizmet alanlarında çalışma ortamını düzenli olarak denetlemek ve risk değerlendirmesini güncel tutmak isteyen işletmeler için.",
+    outputs: [
+      "Risk değerlendirme raporu",
+      "Saha denetim raporu ve fotoğraflı bulgular",
+      "Uygunsuzluk ve düzeltici faaliyet planı",
+      "Risk matrisi ve risk haritası",
+    ],
+    benefits: [
+      "Tehlikelerin sahada görünür hale gelmesi",
+      "Öncelikli risklere odaklanılması",
+      "Düzeltici faaliyetlerin takip edilebilir olması",
+      "Denetim bulgularının yönetim kararlarına dönüşmesi",
+    ],
   },
   {
     id: "technical-engineering",
-    slug: "teknik-muhendislik-hizmetleri",
+    slug: "teknik-muhendislik",
     title: "Teknik Mühendislik Hizmetleri",
     shortTitle: "Teknik Mühendislik Hizmetleri",
     description:
@@ -135,6 +207,20 @@ export const SERVICES: Service[] = [
     ],
     iconName: "engineering",
     highlights: ["Mühendislik yaklaşımı", "Teknik raporlama", "Kalıcı çözüm"],
+    audience:
+      "Makine, ekipman, tesis ve çalışma alanlarında teknik kontrol ve mühendislik desteğine ihtiyaç duyan sanayi, üretim, maden ve inşaat işletmeleri için.",
+    outputs: [
+      "Teknik kontrol ve inceleme raporları",
+      "Çalışma alanı mühendislik değerlendirmesi",
+      "Koruyucu sistem önerileri",
+      "Düzeltici faaliyet teknik çözüm notları",
+    ],
+    benefits: [
+      "Ekipman kaynaklı kaza risklerinin azalması",
+      "Teknik kararların ölçülebilir bulgulara dayanması",
+      "Kalıcı mühendislik çözümlerinin uygulanması",
+      "Mevzuat uyumlu teknik kayıtlar",
+    ],
   },
   {
     id: "documentation",
@@ -154,6 +240,20 @@ export const SERVICES: Service[] = [
     ],
     iconName: "documents",
     highlights: ["Mevzuata uygun", "Eksiksiz dokümantasyon", "Düzenlenebilir şablonlar"],
+    audience:
+      "İSG yönetim sistemi için eksiksiz ve düzenlenebilir dokümanlara ihtiyaç duyan her ölçekten işletme ile İSG profesyonelleri için.",
+    outputs: [
+      "Risk analizi dokümanı",
+      "Acil durum eylem planı",
+      "Çalışma talimatları ve prosedürler",
+      "Kontrol formları ve kayıt şablonları",
+    ],
+    benefits: [
+      "Dokümanların mevzuata uygun ve tutarlı olması",
+      "Denetimlerde hızlı doküman erişimi",
+      "Düzenli güncelleme ile güncel kalan yönetim sistemi",
+      "Kendi işletmenize uyarlanabilir yapı",
+    ],
   },
 ];
 
