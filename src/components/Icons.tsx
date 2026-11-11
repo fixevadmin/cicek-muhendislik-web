@@ -265,13 +265,3 @@ export function Flame({ size = 22, className }: IconProps) {
     </svg>
   );
 }
-
-export function Stethoscope({ size = 22, className }: IconProps) {
-  return (
-    <svg {...base(size, className)}>
-      <path d="M5 3v5a4 4 0 0 0 8 0V3" />
-      <path d="M9 16a5 5 0 0 0 10 0v-3" />
-      <circle cx="19" cy="11" r="2" />
-    </svg>
-  );
-}

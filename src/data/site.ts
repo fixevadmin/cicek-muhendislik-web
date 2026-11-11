@@ -29,7 +29,7 @@ export const SERVICES: Service[] = [
     description:
       "Risk değerlendirmesinden mevzuat uyumuna, İSG kurul süreçlerinden iş kazası incelemesine kadar kapsamlı danışmanlık desteği.",
     longDescription:
-      "İşletmenizin iş sağlığı ve güvenliği yönetim süreçlerini mevzuata uygun ve sürdürülebilir şekilde yaplandırıyoruz. Risk değerlendirmesi, İSG kurulu çalışmaları, mevzuat uyumu ve iş kazası incelemesi konularında uçtan uca danışmanlık sağlıyoruz.",
+      "İşletmenizin iş sağlığı ve güvenliği yönetim süreçlerini mevzuata uygun ve sürdürülebilir şekilde yapılandırıyoruz. Risk değerlendirmesi, İSG kurulu çalışmaları, mevzuat uyumu ve iş kazası incelemesi konularında uçtan uca danışmanlık sağlıyoruz.",
     features: [
       "Risk değerlendirmesi",
       "Saha denetimleri",
