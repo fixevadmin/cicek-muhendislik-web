@@ -14,7 +14,7 @@ export const NAV_ITEMS: NavItem[] = [
   { id: "home", label: "Ana Sayfa", href: "/" },
   { id: "services", label: "Hizmetler", href: "/#services" },
   { id: "sectors", label: "Sektörler", href: "/#sectors" },
-  { id: "training", label: "Eğitim ve Tatbikat", href: "/#training" },
+  { id: "training", label: "Eğitim ve Tatbikat", href: "/egitim-ve-tatbikat" },
   { id: "store", label: "Doküman Mağazası", href: "/#store" },
   { id: "about", label: "Hakkımızda", href: "/#about" },
   { id: "contact", label: "İletişim", href: "/#contact" },

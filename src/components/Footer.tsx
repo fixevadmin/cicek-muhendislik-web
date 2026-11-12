@@ -6,7 +6,7 @@ const CORPORATE_LINKS = [
   { label: "Hakkımızda", href: "/#about" },
   { label: "Danışmanlık Talebi", href: "/#consultation" },
   { label: "Doküman Mağazası", href: "/#store" },
-  { label: "Eğitim ve Tatbikat", href: "/#training" },
+  { label: "Eğitim ve Tatbikat", href: "/egitim-ve-tatbikat" },
   { label: "İletişim", href: "/#contact" },
 ];
 

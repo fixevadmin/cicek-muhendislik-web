@@ -4,8 +4,10 @@ import Footer from "./components/Footer";
 import HomePage from "./pages/HomePage";
 import ServiceDetailPage from "./pages/ServiceDetailPage";
 import SectorDetailPage from "./pages/SectorDetailPage";
+import TrainingPage from "./pages/TrainingPage";
 import { SECTORS, SERVICES } from "./data/site";
 import { SECTOR_DETAILS } from "./data/sectorDetails";
+import { TRAINING_PATH } from "./data/training";
 
 const HOME_TITLE = "Çiçek Mühendislik | İş Sağlığı ve Güvenliği Platformu";
 const HOME_DESCRIPTION =
@@ -32,6 +34,15 @@ function resolvePage(pathname: string): Page {
       title: `${sector.name} İSG Çözümleri | Çiçek Mühendislik`,
       description: detail.seoDescription,
       content: <SectorDetailPage sector={sector} detail={detail} />,
+    };
+  }
+
+  if (pathname === TRAINING_PATH) {
+    return {
+      title: "Eğitim ve Tatbikat | İSG Eğitimi, Yangın ve Tahliye | Çiçek Mühendislik",
+      description:
+        "İş güvenliği, yangın, acil durum tahliye tatbikatı ve ilk yardım eğitimleri. Sektörünüze özel İSG eğitim planlaması ve eğitim talep formu.",
+      content: <TrainingPage />,
     };
   }
 
