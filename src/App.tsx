@@ -1,18 +1,59 @@
-import { useEffect } from "react";
+import { useEffect, type ReactNode } from "react";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import HomePage from "./pages/HomePage";
 import ServiceDetailPage from "./pages/ServiceDetailPage";
-import { SERVICES } from "./data/site";
-import type { Service } from "./types";
+import SectorDetailPage from "./pages/SectorDetailPage";
+import { SECTORS, SERVICES } from "./data/site";
+import { SECTOR_DETAILS } from "./data/sectorDetails";
 
 const HOME_TITLE = "Çiçek Mühendislik | İş Sağlığı ve Güvenliği Platformu";
 const HOME_DESCRIPTION =
   "İSG profesyonelleri ve işletmeler için teknik dokümanlar, uygulamalı rehberler ve profesyonel danışmanlık.";
 
-function findServiceByPath(pathname: string): Service | undefined {
-  const match = pathname.match(/^\/hizmetler\/([^/]+)\/?$/);
-  return match ? SERVICES.find((s) => s.slug === match[1]) : undefined;
+type Page = { title: string; description: string; content: ReactNode };
+
+function resolvePage(pathname: string): Page {
+  const serviceSlug = pathname.match(/^\/hizmetler\/([^/]+)\/?$/)?.[1];
+  const service = SERVICES.find((s) => s.slug === serviceSlug);
+  if (service) {
+    return {
+      title: `${service.title} | Çiçek Mühendislik`,
+      description: service.description,
+      content: <ServiceDetailPage service={service} />,
+    };
+  }
+
+  const sectorSlug = pathname.match(/^\/sektorler\/([^/]+)\/?$/)?.[1];
+  const sector = SECTORS.find((s) => s.slug === sectorSlug);
+  const detail = SECTOR_DETAILS.find((d) => d.slug === sectorSlug);
+  if (sector && detail) {
+    return {
+      title: `${sector.name} İSG Çözümleri | Çiçek Mühendislik`,
+      description: detail.seoDescription,
+      content: <SectorDetailPage sector={sector} detail={detail} />,
+    };
+  }
+
+  if (pathname === "/") {
+    return { title: HOME_TITLE, description: HOME_DESCRIPTION, content: <HomePage /> };
+  }
+
+  return {
+    title: "Sayfa bulunamadı | Çiçek Mühendislik",
+    description: HOME_DESCRIPTION,
+    content: (
+      <section className="section">
+        <div className="container">
+          <h1>Aradığınız sayfa bulunamadı</h1>
+          <p>Adres değişmiş veya kaldırılmış olabilir.</p>
+          <a href="/" className="btn btn--primary">
+            Ana sayfaya dön
+          </a>
+        </div>
+      </section>
+    ),
+  };
 }
 
 function setMeta(attr: "name" | "property", key: string, content: string) {
@@ -26,16 +67,7 @@ function setMeta(attr: "name" | "property", key: string, content: string) {
 }
 
 export default function App() {
-  const { pathname } = window.location;
-  const service = findServiceByPath(pathname);
-  const isHome = pathname === "/";
-
-  const title = service
-    ? `${service.title} | Çiçek Mühendislik`
-    : isHome
-      ? HOME_TITLE
-      : "Sayfa bulunamadı | Çiçek Mühendislik";
-  const description = service ? service.description : HOME_DESCRIPTION;
+  const { title, description, content } = resolvePage(window.location.pathname);
 
   useEffect(() => {
     document.title = title;
@@ -48,25 +80,6 @@ export default function App() {
     const id = window.location.hash.slice(1);
     if (id) document.getElementById(id)?.scrollIntoView();
   }, []);
-
-  let content;
-  if (service) {
-    content = <ServiceDetailPage service={service} />;
-  } else if (isHome) {
-    content = <HomePage />;
-  } else {
-    content = (
-      <section className="section">
-        <div className="container">
-          <h1>Aradığınız sayfa bulunamadı</h1>
-          <p>Adres değişmiş veya kaldırılmış olabilir.</p>
-          <a href="/" className="btn btn--primary">
-            Ana sayfaya dön
-          </a>
-        </div>
-      </section>
-    );
-  }
 
   return (
     <>

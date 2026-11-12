@@ -1,4 +1,4 @@
-import { COMPANY, SECTORS, SERVICES, servicePath } from "../data/site";
+import { COMPANY, SECTORS, SERVICES, sectorPath, servicePath } from "../data/site";
 import { GitHub, LogoMark, Mail, MapPin, Phone } from "./Icons";
 import "./Footer.css";
 
@@ -70,7 +70,7 @@ export default function Footer() {
           <ul className="footer__links">
             {SECTORS.map((s) => (
               <li key={s.id}>
-                <a href="/#sectors" className="footer__link">
+                <a href={sectorPath(s.slug)} className="footer__link">
                   {s.name}
                 </a>
               </li>

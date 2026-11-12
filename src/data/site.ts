@@ -21,6 +21,7 @@ export const NAV_ITEMS: NavItem[] = [
 ];
 
 export const servicePath = (slug: string) => `/hizmetler/${slug}`;
+export const sectorPath = (slug: string) => `/sektorler/${slug}`;
 
 export const SERVICES: Service[] = [
   {
@@ -259,53 +260,53 @@ export const SERVICES: Service[] = [
 
 export const SECTORS: Sector[] = [
   {
-    id: "inşaat",
+    id: "insaat",
     slug: "insaat",
-    name: "İnşaat",
-    description: "Yüksekten düşme, göçme ve ekipman riskleri başta olmak üzere inşaat sahasının İSG gereksinimleri.",
+    name: "İnşaat Sektörü",
+    description: "Yüksekte çalışma, göçük, kaldırma ekipmanı ve şantiye düzeni riskleri için İSG desteği.",
     iconName: "construction",
   },
   {
-    id: "beton",
+    id: "hazir-beton",
     slug: "hazir-beton-ve-yapi-malzemeleri",
     name: "Hazır Beton ve Yapı Malzemeleri",
-    description: "Üretim tesisleri, taşıma ve depolama süreçleri için İSG yönetim ve denetim desteği.",
+    description: "Santral, mikser ve sevkiyat süreçlerinde makine ve depolama riskleri için İSG yönetimi.",
     iconName: "concrete",
   },
   {
+    id: "maden",
+    slug: "maden",
+    name: "Maden Sektörü",
+    description: "Yeraltı ve yerüstü maden sahalarında yüksek riskli çalışma ortamları için teknik ve İSG desteği.",
+    iconName: "mining",
+  },
+  {
     id: "sanayi",
-    slug: "sanayi-ve-uretim",
-    name: "Sanayi ve Üretim",
-    description: "Makine, ekipman ve üretim hattı riskleri için teknik denetim ve eğitim çözümleri.",
+    slug: "sanayi",
+    name: "Sanayi Sektörü",
+    description: "Makine, basınçlı ekipman ve tesis güvenliği için teknik denetim ve mühendislik desteği.",
+    iconName: "industry",
+  },
+  {
+    id: "uretim",
+    slug: "uretim",
+    name: "Üretim Sektörü",
+    description: "Üretim hatlarında makine güvenliği, kimyasal kullanımı ve ergonomi için risk yönetimi.",
     iconName: "industry",
   },
   {
     id: "lojistik",
     slug: "lojistik-ve-depolama",
     name: "Lojistik ve Depolama",
-    description: "Forklift, elleçleme ve depolama operasyonları için risk yönetimi ve saha denetimi.",
+    description: "Forklift, elleçleme, raf sistemleri ve depo operasyonları için risk yönetimi ve saha denetimi.",
     iconName: "logistics",
-  },
-  {
-    id: "maden",
-    slug: "maden-ve-dogal-kaynaklar",
-    name: "Maden ve Doğal Kaynaklar",
-    description: "Yeraltı ve yerüstü madencilik faaliyetleri için yüksek riskli çalışma ortamı İSG desteği.",
-    iconName: "mining",
   },
   {
     id: "hizmet",
     slug: "hizmet-sektoru",
     name: "Hizmet Sektörü",
-    description: "Ofis, perakende ve hizmet işletmeleri için çalışan sağlığı ve ergonomi odaklı İSG çözümleri.",
+    description: "Ofis, perakende ve hizmet işletmeleri için çalışan sağlığı, ergonomi ve acil durum odaklı İSG çözümleri.",
     iconName: "service",
-  },
-  {
-    id: "diger",
-    slug: "diger-is-kollari",
-    name: "Diğer İş Kolları",
-    description: "Farklı risk profillerine sahip diğer tüm iş kolları için uyumlu İSG danışmanlık desteği.",
-    iconName: "other",
   },
 ];
 

@@ -1,4 +1,4 @@
-import { SECTORS } from "../data/site";
+import { SECTORS, sectorPath } from "../data/site";
 import { ArrowRight, SECTOR_ICONS } from "./Icons";
 import "./Sectors.css";
 
@@ -29,8 +29,8 @@ export default function Sectors() {
                 </span>
                 <h3 className="sector-card__name">{sector.name}</h3>
                 <p className="sector-card__desc">{sector.description}</p>
-                <a href="#contact" className="sector-card__link">
-                  Bilgi Al
+                <a href={sectorPath(sector.slug)} className="sector-card__link">
+                  Detayları İncele
                   <ArrowRight size={15} />
                 </a>
               </div>

@@ -78,5 +78,15 @@ export type SectorIconName =
   | "industry"
   | "logistics"
   | "mining"
-  | "service"
-  | "other";
+  | "service";
+
+export type SectorDetail = {
+  slug: string;
+  seoDescription: string;
+  intro: string;
+  risks: string[];
+  consulting: string;
+  inspection: string;
+  training: string;
+  documentation: string;
+};

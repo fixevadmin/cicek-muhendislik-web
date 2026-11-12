@@ -127,12 +127,6 @@ export const SECTOR_ICONS: Record<SectorIconName, (p: IconProps) => JSX.Element>
       <path d="M9 20v-6h6v6" />
     </svg>
   ),
-  other: ({ size = 24, className }) => (
-    <svg {...base(size, className)}>
-      <circle cx="12" cy="12" r="9" />
-      <path d="M12 8v8M8 12h8" />
-    </svg>
-  ),
 };
 
 export const TRUST_ICONS: Record<TrustIconName, (p: IconProps) => JSX.Element> = {
